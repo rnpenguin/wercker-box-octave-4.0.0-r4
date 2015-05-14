@@ -5,6 +5,7 @@ platform: ubuntu@12.04
 description: wercker box for octave-4.0.0-r4
 keywords:
   - octave
+command-timeout: 60
 script: |
   sudo apt-get update
   sudo apt-get install python-software-properties

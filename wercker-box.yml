@@ -18,4 +18,4 @@ script: |
   cd octave-4.0.0-rc4
   sudo ./configure
   sudo make -j 8
-  sudo install
+  sudo make install

@@ -17,5 +17,5 @@ script: |
   tar xvfz octave-4.0.0-rc4.tar.gz
   cd octave-4.0.0-rc4
   sudo ./configure
-  sudo make
+  sudo make -j 8
   sudo install

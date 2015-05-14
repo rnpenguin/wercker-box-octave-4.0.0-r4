@@ -1,0 +1,17 @@
+name: octave-4.0.0-r4-box
+version: 0.0.1
+type: main
+platform: ubuntu@12.04
+description: wercker box for octave-4.0.0-r4
+keywords:
+  - octave
+script: |
+  sudo apt-add-repository -y ppa:octave/stable
+  sudo apt-get update
+  sudo apt-get -y build-dep octave
+  wget ftp://alpha.gnu.org/gnu/octave/octave-4.0.0-rc4.tar.gz
+  tar xvfz octave-4.0.0-rc4.tar.gz
+  cd octave-4.0.0-rc4
+  sudo ./configure
+  sudo make
+  sudo install
